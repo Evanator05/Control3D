@@ -74,6 +74,8 @@ func add_control_to_viewport():
 
 ##Sets the size of the [SubViewport]
 func set_viewport_size(s:Vector2):
+	if has_node('SubViewport') == false:
+		return
 	$SubViewport.size = s
 
 ##Calls clears the [SubViewport]s children then adds the new [Control] nodes
