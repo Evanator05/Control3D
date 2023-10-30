@@ -40,9 +40,9 @@ func _ready() -> void:
 	var subViewport := SubViewport.new()
 	subViewport.name = "SubViewport"
 	subViewport.disable_3d = true
+	add_child(subViewport, true)
 	set_viewport_size(viewport_resolution)
 	if force_viewport_aspect_ratio: set_viewport_size(size*viewport_resolution_scale)
-	add_child(subViewport, true)
 	mesh = QuadMesh.new()
 	mesh.size = size
 	var mat := StandardMaterial3D.new()
